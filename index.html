@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="EveMem: Evolving Memory for Long-horizon Robotic Manipulation.">
-  <meta name="theme-color" content="#f5f6f7">
+  <meta name="theme-color" content="#ffffff">
 
   <title>EveMem · Evolving Memory for Long-horizon Robotic Manipulation</title>
   <link rel="stylesheet" href="styles.css">
@@ -12,212 +12,113 @@
 
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="EveMem home">EveMem</a>
+    <a class="brand" href="#top">EveMem</a>
     <nav aria-label="Primary navigation">
-      <a href="#overview">Overview</a>
-      <a href="#method">Method</a>
-      <a href="#results">Results</a>
-      <a href="#demos">Demos</a>
+      <a href="#simulation">Simulation</a>
+      <a href="#real-world">Real World</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero section-shell">
+    <section class="hero page-width">
       <p class="eyebrow">Robot Learning · Embodied AI</p>
       <h1>EveMem</h1>
-      <p class="hero-title">Evolving Memory for Long-horizon Robotic Manipulation</p>
+      <p class="subtitle">Evolving Memory for Long-horizon Robotic Manipulation</p>
       <p class="authors">Anonymous Authors</p>
 
       <div class="resource-row" aria-label="Project resources">
-        <span class="resource-button disabled" aria-disabled="true">Paper · Coming soon</span>
-        <span class="resource-button disabled" aria-disabled="true">Code · Coming soon</span>
+        <span class="resource-button">Paper · Coming soon</span>
+        <span class="resource-button">Code · Coming soon</span>
       </div>
     </section>
 
-    <section class="teaser section-shell" aria-labelledby="teaser-title">
-      <div class="section-heading compact">
-        <p class="section-kicker">Why memory matters</p>
-        <h2 id="teaser-title">The current frame is not always enough.</h2>
-      </div>
-      <figure class="media-frame">
-        <img src="assets/images/shell-game.svg"
-             alt="A four-stage shell game showing initialization, hiding, swapping, and revealing."
-             fetchpriority="high">
-        <figcaption>
-          A memory-dependent shell game. The robot must preserve spatial evidence,
-          associate it across swaps, and track global task progress before acting.
-        </figcaption>
-      </figure>
-    </section>
-
-    <section id="overview" class="content-section section-shell">
+    <section id="simulation" class="results-section page-width">
       <div class="section-heading">
-        <p class="section-kicker">Overview</p>
-        <h2>Compact memory that preserves decision-critical evidence.</h2>
-      </div>
-      <div class="abstract-grid">
-        <p class="lead-copy">
-          Long-horizon robotic manipulation often depends on visual evidence that
-          has disappeared from the current observation. EveMem turns sampled
-          historical frames into an evolving evidence memory for VLA control.
-        </p>
-        <p>
-          Spatial-temporal attention models relationships within and across
-          historical frames. Two training-only objectives further shape the
-          memory: future visual residual prediction encourages it to retain
-          evidence of upcoming visual changes, while phase-specific visual target
-          grounding preserves local details associated with different task stages.
-          At inference time, only the refined memory conditions the action expert.
-        </p>
-      </div>
-    </section>
-
-    <section id="method" class="content-section section-shell">
-      <div class="section-heading">
-        <p class="section-kicker">Method</p>
-        <h2>An evolving evidence memory for VLA policies.</h2>
+        <p class="section-label">Simulation</p>
+        <h2>Simulation Results</h2>
+        <p>Representative successful EveMem rollouts on memory-dependent RMBench tasks.</p>
       </div>
 
-      <figure class="media-frame method-overview">
-        <a class="figure-link" href="assets/images/evemem-overview.svg"
-           target="_blank" rel="noopener" aria-label="Open the EveMem pipeline figure at full size">
-          <img src="assets/images/evemem-overview.svg"
-               alt="Overview of the EveMem pipeline from historical frames to the action expert."
-               loading="lazy">
-        </a>
-        <figcaption>
-          EveMem refines raw episodic memory and progress tokens, fuses the
-          resulting evidence with the original memory, and conditions the VLA
-          action expert through cross-attention.
-        </figcaption>
-      </figure>
-
-      <div class="capability-grid">
-        <article>
-          <span class="capability-index">01</span>
-          <h3>Spatial grounding</h3>
-          <p>Preserves fine-grained object locations and interaction regions in each sampled frame.</p>
-        </article>
-        <article>
-          <span class="capability-index">02</span>
-          <h3>Temporal association</h3>
-          <p>Connects evidence across observations with causal temporal attention.</p>
-        </article>
-        <article>
-          <span class="capability-index">03</span>
-          <h3>Progress tracking</h3>
-          <p>Maintains phase-aware progress tokens that summarize what has already happened.</p>
-        </article>
-      </div>
-
-      <figure class="media-frame architecture-frame">
-        <a class="figure-link" href="assets/images/evemem-architecture.svg"
-           target="_blank" rel="noopener" aria-label="Open the detailed EveMem architecture figure at full size">
-          <img src="assets/images/evemem-architecture.svg"
-               alt="Detailed EveMem architecture and its two auxiliary training tasks."
-               loading="lazy">
-        </a>
-        <figcaption>
-          The EveMem block and its two complementary training objectives: future
-          visual residual prediction and phase-specific visual target grounding.
-        </figcaption>
-      </figure>
-    </section>
-
-    <section id="results" class="content-section section-shell">
-      <div class="section-heading">
-        <p class="section-kicker">Results</p>
-        <h2>Consistent gains in simulation and the real world.</h2>
-      </div>
-
-      <div class="result-grid">
-        <article class="result-card">
-          <strong>53.92%</strong>
-          <span>RoboMME aggregate success</span>
-          <p>9.41 percentage points above the strongest FrameSamp baseline.</p>
-        </article>
-        <article class="result-card">
+      <div class="metric-row" aria-label="Simulation benchmark results">
+        <article class="metric">
           <strong>59.3%</strong>
           <span>RMBench aggregate success</span>
-          <p>State-of-the-art aggregate performance across memory-dependent tasks.</p>
         </article>
-        <article class="result-card">
-          <strong>61.25%</strong>
-          <span>Real-world average success</span>
-          <p>Up from 30.00% with FrameSamp across four multi-phase tasks.</p>
+        <article class="metric">
+          <strong>53.92%</strong>
+          <span>RoboMME aggregate success</span>
+        </article>
+      </div>
+
+      <div class="video-grid">
+        <article class="video-card">
+          <video controls muted playsinline preload="metadata"
+                 poster="assets/images/rmbench-swap-blocks-poster.png">
+            <source src="assets/videos/rmbench-swap-blocks.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <h3>Swap Blocks</h3>
+            <p>Track the target block across swaps.</p>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <video controls muted playsinline preload="metadata"
+                 poster="assets/images/rmbench-cover-blocks-poster.png">
+            <source src="assets/videos/rmbench-cover-blocks.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <h3>Cover Blocks</h3>
+            <p>Recall which block should be covered.</p>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <video controls muted playsinline preload="metadata"
+                 poster="assets/images/rmbench-rearrange-blocks-poster.png">
+            <source src="assets/videos/rmbench-rearrange-blocks.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <h3>Rearrange Blocks</h3>
+            <p>Recover the demonstrated spatial arrangement.</p>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <video controls muted playsinline preload="metadata"
+                 poster="assets/images/rmbench-put-back-block-poster.png">
+            <source src="assets/videos/rmbench-put-back-block.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <h3>Put Back Block</h3>
+            <p>Return the displaced block to its original position.</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="demos" class="content-section section-shell">
+    <section id="real-world" class="results-section page-width">
       <div class="section-heading">
-        <p class="section-kicker">Demonstrations</p>
-        <h2>Memory-dependent manipulation in action.</h2>
+        <p class="section-label">Real World</p>
+        <h2>Real-world Results</h2>
+        <p>EveMem is evaluated on four long-horizon, multi-phase bimanual manipulation tasks.</p>
       </div>
 
-      <div class="demo-grid">
-        <article class="demo-card">
-          <video controls muted playsinline preload="metadata"
-                 poster="assets/images/route-stick-poster.png">
-            <source src="assets/videos/route-stick.mp4" type="video/mp4">
-          </video>
-          <div class="demo-copy">
-            <h3>RouteStick</h3>
-            <p>Associate the demonstrated route with the later manipulation decision.</p>
-          </div>
-        </article>
-
-        <article class="demo-card">
-          <video controls muted playsinline preload="metadata"
-                 poster="assets/images/button-unmask-swap-poster.png">
-            <source src="assets/videos/button-unmask-swap.mp4" type="video/mp4">
-          </video>
-          <div class="demo-copy">
-            <h3>ButtonUnmaskSwap</h3>
-            <p>Track a target through occlusion and subsequent object swaps.</p>
-          </div>
-        </article>
-
-        <article class="demo-card">
-          <video controls muted playsinline preload="metadata"
-                 poster="assets/images/insert-peg-poster.png">
-            <source src="assets/videos/insert-peg.mp4" type="video/mp4">
-          </video>
-          <div class="demo-copy">
-            <h3>InsertPeg</h3>
-            <p>Remember earlier task evidence through a multi-stage interaction.</p>
-          </div>
-        </article>
-      </div>
-
-      <article class="realworld-demo">
-        <div class="realworld-copy">
-          <p class="section-kicker">Real-world evaluation</p>
-          <h3>Four tasks, multiple phases, one evolving memory.</h3>
-          <p>
-            EveMem is evaluated on long-horizon bimanual manipulation tasks in
-            which relevant evidence appears early and must guide later actions.
-          </p>
+      <div class="real-world-result">
+        <div class="real-world-score">
+          <strong>61.25%</strong>
+          <span>Average success rate</span>
+          <p>Compared with 30.00% for FrameSamp.</p>
         </div>
         <video controls muted playsinline preload="metadata"
                poster="assets/images/realworld-poster.png">
           <source src="assets/videos/realworld-grid.mp4" type="video/mp4">
         </video>
-      </article>
-    </section>
-
-    <section class="release-section section-shell">
-      <p class="section-kicker">Resources</p>
-      <h2>Paper and code will be released soon.</h2>
-      <p>Additional checkpoints, evaluation details, and project materials will be added here.</p>
-      <div class="resource-row">
-        <span class="resource-button disabled" aria-disabled="true">Paper · Coming soon</span>
-        <span class="resource-button disabled" aria-disabled="true">Code · Coming soon</span>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer page-width">
     <span>© 2026 EveMem Project</span>
     <a href="#top">Back to top</a>
   </footer>
