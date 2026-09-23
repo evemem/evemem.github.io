@@ -232,7 +232,7 @@ h2 {
 }
 
 .robomme-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .video-card {
@@ -301,12 +301,6 @@ h3 {
 
 .site-footer a {
   text-decoration: none;
-}
-
-@media (max-width: 900px) {
-  .robomme-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 720px) {
