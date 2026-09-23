@@ -36,64 +36,113 @@
       <div class="section-heading">
         <p class="section-label">Simulation</p>
         <h2>Simulation Results</h2>
-        <p>Representative successful EveMem rollouts on memory-dependent RMBench tasks.</p>
+        <p>Representative successful EveMem rollouts from both RoboMME and RMBench.</p>
       </div>
 
       <div class="metric-row" aria-label="Simulation benchmark results">
         <article class="metric">
-          <strong>59.3%</strong>
-          <span>RMBench aggregate success</span>
-        </article>
-        <article class="metric">
           <strong>53.92%</strong>
           <span>RoboMME aggregate success</span>
         </article>
+        <article class="metric">
+          <strong>59.3%</strong>
+          <span>RMBench aggregate success</span>
+        </article>
       </div>
 
-      <div class="video-grid">
-        <article class="video-card">
-          <video controls muted playsinline preload="metadata"
-                 poster="assets/images/rmbench-swap-blocks-poster.png">
-            <source src="assets/videos/rmbench-swap-blocks.mp4" type="video/mp4">
-          </video>
-          <div class="video-caption">
-            <h3>Swap Blocks</h3>
-            <p>Track the target block across swaps.</p>
-          </div>
-        </article>
+      <div class="result-group">
+        <div class="benchmark-heading">
+          <h3>RoboMME</h3>
+          <p>Long-horizon tasks with evidence distributed across multiple stages.</p>
+        </div>
 
-        <article class="video-card">
-          <video controls muted playsinline preload="metadata"
-                 poster="assets/images/rmbench-cover-blocks-poster.png">
-            <source src="assets/videos/rmbench-cover-blocks.mp4" type="video/mp4">
-          </video>
-          <div class="video-caption">
-            <h3>Cover Blocks</h3>
-            <p>Recall which block should be covered.</p>
-          </div>
-        </article>
+        <div class="video-grid robomme-grid">
+          <article class="video-card">
+            <video controls muted playsinline preload="metadata"
+                   poster="assets/images/route-stick-poster.png">
+              <source src="assets/videos/route-stick.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">
+              <h3>RouteStick</h3>
+              <p>Recall the demonstrated route for later manipulation.</p>
+            </div>
+          </article>
 
-        <article class="video-card">
-          <video controls muted playsinline preload="metadata"
-                 poster="assets/images/rmbench-rearrange-blocks-poster.png">
-            <source src="assets/videos/rmbench-rearrange-blocks.mp4" type="video/mp4">
-          </video>
-          <div class="video-caption">
-            <h3>Rearrange Blocks</h3>
-            <p>Recover the demonstrated spatial arrangement.</p>
-          </div>
-        </article>
+          <article class="video-card">
+            <video controls muted playsinline preload="metadata"
+                   poster="assets/images/button-unmask-swap-poster.png">
+              <source src="assets/videos/button-unmask-swap.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">
+              <h3>ButtonUnmaskSwap</h3>
+              <p>Track the target through unmasking and object swaps.</p>
+            </div>
+          </article>
 
-        <article class="video-card">
-          <video controls muted playsinline preload="metadata"
-                 poster="assets/images/rmbench-put-back-block-poster.png">
-            <source src="assets/videos/rmbench-put-back-block.mp4" type="video/mp4">
-          </video>
-          <div class="video-caption">
-            <h3>Put Back Block</h3>
-            <p>Return the displaced block to its original position.</p>
-          </div>
-        </article>
+          <article class="video-card">
+            <video controls muted playsinline preload="metadata"
+                   poster="assets/images/insert-peg-poster.png">
+              <source src="assets/videos/insert-peg.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">
+              <h3>InsertPeg</h3>
+              <p>Preserve task progress through a multi-stage interaction.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="result-group">
+        <div class="benchmark-heading">
+          <h3>RMBench</h3>
+          <p>Memory-dependent tasks requiring earlier visual evidence for later actions.</p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <video controls muted playsinline preload="metadata"
+                   poster="assets/images/rmbench-swap-blocks-poster.png">
+              <source src="assets/videos/rmbench-swap-blocks.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">
+              <h3>Swap Blocks</h3>
+              <p>Track the target block across swaps.</p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <video controls muted playsinline preload="metadata"
+                   poster="assets/images/rmbench-cover-blocks-poster.png">
+              <source src="assets/videos/rmbench-cover-blocks.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">
+              <h3>Cover Blocks</h3>
+              <p>Recall which block should be covered.</p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <video controls muted playsinline preload="metadata"
+                   poster="assets/images/rmbench-rearrange-blocks-poster.png">
+              <source src="assets/videos/rmbench-rearrange-blocks.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">
+              <h3>Rearrange Blocks</h3>
+              <p>Recover the demonstrated spatial arrangement.</p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <video controls muted playsinline preload="metadata"
+                   poster="assets/images/rmbench-put-back-block-poster.png">
+              <source src="assets/videos/rmbench-put-back-block.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">
+              <h3>Put Back Block</h3>
+              <p>Return the displaced block to its original position.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
