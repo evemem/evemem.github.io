@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260925">
+  <script src="script.js?v=20260925" defer></script>
 </head>
 
 <body>
@@ -412,9 +413,39 @@
                 <h5>Clean Table</h5>
                 <span class="phase-badge">6 phases</span>
               </header>
-              <div class="task-phase-media">
-                <img src="assets/images/phase-clean-table.png"
-                     alt="Six Clean Table phases: store three objects and press the button after each placement.">
+              <div class="phase-carousel" data-carousel>
+                <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous Clean Table phase">&#8249;</button>
+                <div class="phase-slides">
+                  <figure class="phase-slide" data-carousel-slide>
+                    <img src="assets/images/clean-table-phase-1.png" alt="Clean Table phase 1: store the first object.">
+                    <figcaption><strong>Phase 1</strong><span>Store Object 1</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/clean-table-phase-2.png" alt="Clean Table phase 2: press the button.">
+                    <figcaption><strong>Phase 2</strong><span>Press Button</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/clean-table-phase-3.png" alt="Clean Table phase 3: store the second object.">
+                    <figcaption><strong>Phase 3</strong><span>Store Object 2</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/clean-table-phase-4.png" alt="Clean Table phase 4: press the button.">
+                    <figcaption><strong>Phase 4</strong><span>Press Button</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/clean-table-phase-5.png" alt="Clean Table phase 5: store the third object.">
+                    <figcaption><strong>Phase 5</strong><span>Store Object 3</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/clean-table-phase-6.png" alt="Clean Table phase 6: press the button.">
+                    <figcaption><strong>Phase 6</strong><span>Press Button</span></figcaption>
+                  </figure>
+                </div>
+                <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next Clean Table phase">&#8250;</button>
+                <div class="phase-pagination">
+                  <div class="phase-dots" data-carousel-dots aria-label="Choose a Clean Table phase"></div>
+                  <span class="phase-counter"><span data-carousel-current>1</span> / 6</span>
+                </div>
               </div>
               <div class="task-description">
                 <p><strong>Task description:</strong> Store three objects one by one and press the button after each placement, completing six phases in sequence.</p>
@@ -426,9 +457,27 @@
                 <h5>Cover Block</h5>
                 <span class="phase-badge">3 phases</span>
               </header>
-              <div class="task-phase-media">
-                <img src="assets/images/phase-cover-block.png"
-                     alt="Three Cover Block phases: cover the blue block, cover the red block, and uncover the red block.">
+              <div class="phase-carousel" data-carousel>
+                <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous Cover Block phase">&#8249;</button>
+                <div class="phase-slides">
+                  <figure class="phase-slide" data-carousel-slide>
+                    <img src="assets/images/cover-block-phase-1.png" alt="Cover Block phase 1: cover the blue block.">
+                    <figcaption><strong>Phase 1</strong><span>Cover Blue Block</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/cover-block-phase-2.png" alt="Cover Block phase 2: cover the red block.">
+                    <figcaption><strong>Phase 2</strong><span>Cover Red Block</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/cover-block-phase-3.png" alt="Cover Block phase 3: uncover the red block.">
+                    <figcaption><strong>Phase 3</strong><span>Uncover Red Block</span></figcaption>
+                  </figure>
+                </div>
+                <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next Cover Block phase">&#8250;</button>
+                <div class="phase-pagination">
+                  <div class="phase-dots" data-carousel-dots aria-label="Choose a Cover Block phase"></div>
+                  <span class="phase-counter"><span data-carousel-current>1</span> / 3</span>
+                </div>
               </div>
               <div class="task-description">
                 <p><strong>Task description:</strong> Cover the blue block, cover the red block, and then uncover the red block.</p>
@@ -440,9 +489,39 @@
                 <h5>Pour Water</h5>
                 <span class="phase-badge">6 phases</span>
               </header>
-              <div class="task-phase-media">
-                <img src="assets/images/phase-pour-water.png"
-                     alt="Six Pour Water phases from picking up the cup and kettle through pouring and putting both objects down.">
+              <div class="phase-carousel" data-carousel>
+                <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous Pour Water phase">&#8249;</button>
+                <div class="phase-slides">
+                  <figure class="phase-slide" data-carousel-slide>
+                    <img src="assets/images/pour-water-phase-1.png" alt="Pour Water phase 1: pick up the cup.">
+                    <figcaption><strong>Phase 1</strong><span>Pick Up Cup</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/pour-water-phase-2.png" alt="Pour Water phase 2: pick up the kettle.">
+                    <figcaption><strong>Phase 2</strong><span>Pick Up Kettle</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/pour-water-phase-3.png" alt="Pour Water phase 3: align the cup and kettle.">
+                    <figcaption><strong>Phase 3</strong><span>Align for Pouring</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/pour-water-phase-4.png" alt="Pour Water phase 4: pour the water.">
+                    <figcaption><strong>Phase 4</strong><span>Pour</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/pour-water-phase-5.png" alt="Pour Water phase 5: put down the kettle.">
+                    <figcaption><strong>Phase 5</strong><span>Put Down Kettle</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/pour-water-phase-6.png" alt="Pour Water phase 6: put down the cup.">
+                    <figcaption><strong>Phase 6</strong><span>Put Down Cup</span></figcaption>
+                  </figure>
+                </div>
+                <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next Pour Water phase">&#8250;</button>
+                <div class="phase-pagination">
+                  <div class="phase-dots" data-carousel-dots aria-label="Choose a Pour Water phase"></div>
+                  <span class="phase-counter"><span data-carousel-current>1</span> / 6</span>
+                </div>
               </div>
               <div class="task-description">
                 <p><strong>Task description:</strong> Pick up the cup and kettle, align them, pour the water, and return both objects to the table.</p>
@@ -454,9 +533,23 @@
                 <h5>Swap Food</h5>
                 <span class="phase-badge">2 phases</span>
               </header>
-              <div class="task-phase-media">
-                <img src="assets/images/phase-swap-food.png"
-                     alt="Two Swap Food phases exchanging the food items between the left and right plates.">
+              <div class="phase-carousel" data-carousel>
+                <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous Swap Food phase">&#8249;</button>
+                <div class="phase-slides">
+                  <figure class="phase-slide" data-carousel-slide>
+                    <img src="assets/images/swap-food-phase-1.png" alt="Swap Food phase 1: move the left food item to the right plate.">
+                    <figcaption><strong>Phase 1</strong><span>Move Left Food Right</span></figcaption>
+                  </figure>
+                  <figure class="phase-slide" data-carousel-slide hidden>
+                    <img src="assets/images/swap-food-phase-2.png" alt="Swap Food phase 2: move the right food item to the left plate.">
+                    <figcaption><strong>Phase 2</strong><span>Move Right Food Left</span></figcaption>
+                  </figure>
+                </div>
+                <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next Swap Food phase">&#8250;</button>
+                <div class="phase-pagination">
+                  <div class="phase-dots" data-carousel-dots aria-label="Choose a Swap Food phase"></div>
+                  <span class="phase-counter"><span data-carousel-current>1</span> / 2</span>
+                </div>
               </div>
               <div class="task-description">
                 <p><strong>Task description:</strong> Move the food item on the left plate to the right plate, then move the other item to the left plate.</p>
