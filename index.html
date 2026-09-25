@@ -61,11 +61,40 @@
               <h3>RoboMME</h3>
               <p>Long-horizon tasks with evidence distributed across multiple stages.</p>
             </div>
-            <div class="benchmark-score">
-              <strong>53.92%</strong>
-              <span>aggregate success</span>
-            </div>
           </header>
+
+          <h4 class="result-subheading">Quantitative Results</h4>
+          <div class="results-table-wrap">
+            <table class="results-table">
+              <caption>Aggregate success rate on RoboMME</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Method</th>
+                  <th scope="col">Success Rate (%) ↑</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>π<sub>0.5</sub></td>
+                  <td>17.93</td>
+                </tr>
+                <tr>
+                  <td>MemER</td>
+                  <td>42.38</td>
+                </tr>
+                <tr>
+                  <td>FrameSamp</td>
+                  <td>44.51</td>
+                </tr>
+                <tr class="ours">
+                  <td>EveMem (Ours)</td>
+                  <td><strong>53.92</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="result-subheading qualitative-heading">Qualitative Results</h4>
 
           <div class="video-grid robomme-grid">
             <article class="video-card">
@@ -120,11 +149,50 @@
               <h3>RMBench</h3>
               <p>Memory-dependent tasks requiring earlier visual evidence for later actions.</p>
             </div>
-            <div class="benchmark-score">
-              <strong>59.3%</strong>
-              <span>aggregate success</span>
-            </div>
           </header>
+
+          <h4 class="result-subheading">Quantitative Results</h4>
+          <div class="results-table-wrap">
+            <table class="results-table">
+              <caption>Success rate across RMBench memory-complexity levels</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Method</th>
+                  <th scope="col">M(1) ↑</th>
+                  <th scope="col">M(n) ↑</th>
+                  <th scope="col">Average ↑</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>π<sub>0.5</sub></td>
+                  <td>14.4</td>
+                  <td>5.5</td>
+                  <td>10.4</td>
+                </tr>
+                <tr>
+                  <td>FrameSamp</td>
+                  <td>61.0</td>
+                  <td>15.8</td>
+                  <td>40.9</td>
+                </tr>
+                <tr>
+                  <td>Mem-0</td>
+                  <td>52.8</td>
+                  <td>28.5</td>
+                  <td>42.0</td>
+                </tr>
+                <tr class="ours">
+                  <td>EveMem (Ours)</td>
+                  <td><strong>67.4</strong></td>
+                  <td><strong>49.3</strong></td>
+                  <td><strong>59.3</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="result-subheading qualitative-heading">Qualitative Results</h4>
 
           <div class="video-grid rmbench-grid">
             <article class="video-card">
@@ -189,11 +257,40 @@
               <h3>Real-world Manipulation</h3>
               <p>EveMem maintains decision-relevant evidence across extended interactions.</p>
             </div>
-            <div class="benchmark-score">
-              <strong>61.25%</strong>
-              <span>average success · FrameSamp 30.00%</span>
-            </div>
           </header>
+
+          <h4 class="result-subheading">Quantitative Results</h4>
+          <div class="results-table-wrap">
+            <table class="results-table">
+              <caption>Average performance across four real-world tasks</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Method</th>
+                  <th scope="col">TSR (%) ↑</th>
+                  <th scope="col">PCR (%) ↑</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>π<sub>0.5</sub></td>
+                  <td>2.50</td>
+                  <td>31.25</td>
+                </tr>
+                <tr>
+                  <td>FrameSamp</td>
+                  <td>30.00</td>
+                  <td>57.08</td>
+                </tr>
+                <tr class="ours">
+                  <td>EveMem (Ours)</td>
+                  <td><strong>61.25</strong></td>
+                  <td><strong>73.96</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="result-subheading qualitative-heading">Qualitative Results</h4>
 
           <video class="featured-video" controls muted playsinline preload="metadata"
                  poster="assets/images/realworld-poster.png">
