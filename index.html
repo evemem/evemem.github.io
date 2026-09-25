@@ -7,180 +7,208 @@
   <meta name="theme-color" content="#ffffff">
 
   <title>EveMem · Evolving Memory for Long-horizon Robotic Manipulation</title>
-  <link rel="stylesheet" href="styles.css?v=20260923-2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260925">
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">EveMem</a>
-    <nav aria-label="Primary navigation">
-      <a href="#simulation">Simulation</a>
-      <a href="#real-world">Real World</a>
-    </nav>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand gradient-text" href="#top">EveMem</a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#simulation">Simulation Results</a>
+        <a href="#real-world">Real-world Results</a>
+      </nav>
+
+      <div class="nav-actions" aria-label="Project resources">
+        <span class="nav-button" aria-disabled="true">Paper</span>
+        <span class="nav-button" aria-disabled="true">Code</span>
+      </div>
+    </div>
   </header>
 
   <main id="top">
-    <section class="hero page-width">
-      <p class="eyebrow">Robot Learning · Embodied AI</p>
-      <h1>EveMem</h1>
-      <p class="subtitle">Evolving Memory for Long-horizon Robotic Manipulation</p>
-      <p class="authors">Anonymous Authors</p>
+    <section class="publication-hero">
+      <div class="hero-inner">
+        <h1><span class="gradient-text">EveMem</span>: Evolving Memory for Long-horizon Robotic Manipulation</h1>
+        <p class="authors">Anonymous Authors</p>
 
-      <div class="resource-row" aria-label="Project resources">
-        <span class="resource-button">Paper · Coming soon</span>
-        <span class="resource-button">Code · Coming soon</span>
-      </div>
-    </section>
-
-    <section id="simulation" class="results-section page-width">
-      <div class="section-heading">
-        <p class="section-label">Simulation</p>
-        <h2>Simulation Results</h2>
-        <p>Representative successful EveMem rollouts from both RoboMME and RMBench.</p>
-      </div>
-
-      <div class="metric-row" aria-label="Simulation benchmark results">
-        <article class="metric">
-          <strong>53.92%</strong>
-          <span>RoboMME aggregate success</span>
-        </article>
-        <article class="metric">
-          <strong>59.3%</strong>
-          <span>RMBench aggregate success</span>
-        </article>
-      </div>
-
-      <div class="result-group">
-        <div class="benchmark-heading">
-          <h3>RoboMME</h3>
-          <p>Long-horizon tasks with evidence distributed across multiple stages.</p>
-        </div>
-
-        <div class="video-grid robomme-grid">
-          <article class="video-card">
-            <video controls muted playsinline preload="metadata"
-                   poster="assets/images/route-stick-poster.png">
-              <source src="assets/videos/route-stick.mp4" type="video/mp4">
-            </video>
-            <div class="video-caption">
-              <h3>RouteStick</h3>
-              <p>Recall the demonstrated route for later manipulation.</p>
-            </div>
-          </article>
-
-          <article class="video-card">
-            <video controls muted playsinline preload="metadata"
-                   poster="assets/images/button-unmask-swap-poster.png">
-              <source src="assets/videos/button-unmask-swap.mp4" type="video/mp4">
-            </video>
-            <div class="video-caption">
-              <h3>ButtonUnmaskSwap</h3>
-              <p>Track the target through unmasking and object swaps.</p>
-            </div>
-          </article>
-
-          <article class="video-card">
-            <video controls muted playsinline preload="metadata"
-                   poster="assets/images/insert-peg-poster.png">
-              <source src="assets/videos/insert-peg.mp4" type="video/mp4">
-            </video>
-            <div class="video-caption">
-              <h3>InsertPeg</h3>
-              <p>Preserve task progress through a multi-stage interaction.</p>
-            </div>
-          </article>
-
-          <article class="video-card">
-            <video controls muted playsinline preload="metadata"
-                   poster="assets/images/swing-x-times-poster.png">
-              <source src="assets/videos/swing-x-times.mp4" type="video/mp4">
-            </video>
-            <div class="video-caption">
-              <h3>SwingXtimes</h3>
-              <p>Track repeated back-and-forth motions before stopping.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="result-group">
-        <div class="benchmark-heading">
-          <h3>RMBench</h3>
-          <p>Memory-dependent tasks requiring earlier visual evidence for later actions.</p>
-        </div>
-
-        <div class="video-grid">
-          <article class="video-card">
-            <video controls muted playsinline preload="metadata"
-                   poster="assets/images/rmbench-swap-blocks-poster.png">
-              <source src="assets/videos/rmbench-swap-blocks.mp4" type="video/mp4">
-            </video>
-            <div class="video-caption">
-              <h3>Swap Blocks</h3>
-              <p>Track the target block across swaps.</p>
-            </div>
-          </article>
-
-          <article class="video-card">
-            <video controls muted playsinline preload="metadata"
-                   poster="assets/images/rmbench-cover-blocks-poster.png">
-              <source src="assets/videos/rmbench-cover-blocks.mp4" type="video/mp4">
-            </video>
-            <div class="video-caption">
-              <h3>Cover Blocks</h3>
-              <p>Recall which block should be covered.</p>
-            </div>
-          </article>
-
-          <article class="video-card">
-            <video controls muted playsinline preload="metadata"
-                   poster="assets/images/rmbench-rearrange-blocks-poster.png">
-              <source src="assets/videos/rmbench-rearrange-blocks.mp4" type="video/mp4">
-            </video>
-            <div class="video-caption">
-              <h3>Rearrange Blocks</h3>
-              <p>Recover the demonstrated spatial arrangement.</p>
-            </div>
-          </article>
-
-          <article class="video-card">
-            <video controls muted playsinline preload="metadata"
-                   poster="assets/images/rmbench-put-back-block-poster.png">
-              <source src="assets/videos/rmbench-put-back-block.mp4" type="video/mp4">
-            </video>
-            <div class="video-caption">
-              <h3>Put Back Block</h3>
-              <p>Return the displaced block to its original position.</p>
-            </div>
-          </article>
+        <div class="publication-links" aria-label="Project resources">
+          <span class="resource-button" aria-disabled="true">
+            Paper · Coming soon
+          </span>
+          <span class="resource-button" aria-disabled="true">
+            Code · Coming soon
+          </span>
         </div>
       </div>
     </section>
 
-    <section id="real-world" class="results-section page-width">
-      <div class="section-heading">
-        <p class="section-label">Real World</p>
-        <h2>Real-world Results</h2>
-        <p>EveMem is evaluated on four long-horizon, multi-phase bimanual manipulation tasks.</p>
-      </div>
+    <section id="simulation" class="section section-muted">
+      <div class="page-width">
+        <header class="section-heading">
+          <h2>Simulation Results</h2>
+          <span class="heading-rule" aria-hidden="true"></span>
+          <p>Representative successful EveMem rollouts on RoboMME and RMBench.</p>
+        </header>
 
-      <div class="real-world-result">
-        <div class="real-world-score">
-          <strong>61.25%</strong>
-          <span>Average success rate</span>
-          <p>Compared with 30.00% for FrameSamp.</p>
-        </div>
-        <video controls muted playsinline preload="metadata"
-               poster="assets/images/realworld-poster.png">
-          <source src="assets/videos/realworld-grid.mp4" type="video/mp4">
-        </video>
+        <article class="benchmark-block">
+          <header class="benchmark-header">
+            <div>
+              <h3>RoboMME</h3>
+              <p>Long-horizon tasks with evidence distributed across multiple stages.</p>
+            </div>
+            <div class="benchmark-score">
+              <strong>53.92%</strong>
+              <span>aggregate success</span>
+            </div>
+          </header>
+
+          <div class="video-grid robomme-grid">
+            <article class="video-card">
+              <video controls muted playsinline preload="metadata"
+                     poster="assets/images/route-stick-poster.png">
+                <source src="assets/videos/route-stick.mp4" type="video/mp4">
+              </video>
+              <div class="video-caption">
+                <h4>RouteStick</h4>
+                <p>Recall the demonstrated route for later manipulation.</p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <video controls muted playsinline preload="metadata"
+                     poster="assets/images/button-unmask-swap-poster.png">
+                <source src="assets/videos/button-unmask-swap.mp4" type="video/mp4">
+              </video>
+              <div class="video-caption">
+                <h4>ButtonUnmaskSwap</h4>
+                <p>Track the target through unmasking and object swaps.</p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <video controls muted playsinline preload="metadata"
+                     poster="assets/images/insert-peg-poster.png">
+                <source src="assets/videos/insert-peg.mp4" type="video/mp4">
+              </video>
+              <div class="video-caption">
+                <h4>InsertPeg</h4>
+                <p>Preserve task progress through a multi-stage interaction.</p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <video controls muted playsinline preload="metadata"
+                     poster="assets/images/swing-x-times-poster.png">
+                <source src="assets/videos/swing-x-times.mp4" type="video/mp4">
+              </video>
+              <div class="video-caption">
+                <h4>SwingXtimes</h4>
+                <p>Track repeated back-and-forth motions before stopping.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="benchmark-block">
+          <header class="benchmark-header">
+            <div>
+              <h3>RMBench</h3>
+              <p>Memory-dependent tasks requiring earlier visual evidence for later actions.</p>
+            </div>
+            <div class="benchmark-score">
+              <strong>59.3%</strong>
+              <span>aggregate success</span>
+            </div>
+          </header>
+
+          <div class="video-grid rmbench-grid">
+            <article class="video-card">
+              <video controls muted playsinline preload="metadata"
+                     poster="assets/images/rmbench-swap-blocks-poster.png">
+                <source src="assets/videos/rmbench-swap-blocks.mp4" type="video/mp4">
+              </video>
+              <div class="video-caption">
+                <h4>Swap Blocks</h4>
+                <p>Track the target block across swaps.</p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <video controls muted playsinline preload="metadata"
+                     poster="assets/images/rmbench-cover-blocks-poster.png">
+                <source src="assets/videos/rmbench-cover-blocks.mp4" type="video/mp4">
+              </video>
+              <div class="video-caption">
+                <h4>Cover Blocks</h4>
+                <p>Recall which block should be covered.</p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <video controls muted playsinline preload="metadata"
+                     poster="assets/images/rmbench-rearrange-blocks-poster.png">
+                <source src="assets/videos/rmbench-rearrange-blocks.mp4" type="video/mp4">
+              </video>
+              <div class="video-caption">
+                <h4>Rearrange Blocks</h4>
+                <p>Recover the demonstrated spatial arrangement.</p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <video controls muted playsinline preload="metadata"
+                     poster="assets/images/rmbench-put-back-block-poster.png">
+                <source src="assets/videos/rmbench-put-back-block.mp4" type="video/mp4">
+              </video>
+              <div class="video-caption">
+                <h4>Put Back Block</h4>
+                <p>Return the displaced block to its original position.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="real-world" class="section">
+      <div class="page-width">
+        <header class="section-heading">
+          <h2>Real-world Results</h2>
+          <span class="heading-rule" aria-hidden="true"></span>
+          <p>Evaluation on four long-horizon, multi-phase bimanual manipulation tasks.</p>
+        </header>
+
+        <article class="benchmark-block real-world-block">
+          <header class="benchmark-header">
+            <div>
+              <h3>Real-world Manipulation</h3>
+              <p>EveMem maintains decision-relevant evidence across extended interactions.</p>
+            </div>
+            <div class="benchmark-score">
+              <strong>61.25%</strong>
+              <span>average success · FrameSamp 30.00%</span>
+            </div>
+          </header>
+
+          <video class="featured-video" controls muted playsinline preload="metadata"
+                 poster="assets/images/realworld-poster.png">
+            <source src="assets/videos/realworld-grid.mp4" type="video/mp4">
+          </video>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer page-width">
-    <span>© 2026 EveMem Project</span>
-    <a href="#top">Back to top</a>
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <span>© 2026 EveMem Project</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
   </footer>
 </body>
 </html>
