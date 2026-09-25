@@ -65,33 +65,99 @@
 
           <h4 class="result-subheading">Quantitative Results</h4>
           <div class="results-table-wrap">
-            <table class="results-table">
-              <caption>Aggregate success rate on RoboMME</caption>
+            <table class="results-table wide robomme-results-table">
+              <caption>Task-level success rates on RoboMME</caption>
               <thead>
                 <tr>
-                  <th scope="col">Method</th>
-                  <th scope="col">Success Rate (%) ↑</th>
+                  <th scope="col" rowspan="2">Method</th>
+                  <th scope="colgroup" colspan="4">Counting</th>
+                  <th scope="colgroup" colspan="4">Permanence</th>
+                  <th scope="colgroup" colspan="4">Reference</th>
+                  <th scope="colgroup" colspan="4">Imitation</th>
+                  <th scope="col" rowspan="2">Average ↑</th>
+                </tr>
+                <tr>
+                  <th scope="col" class="suite-start">BinFill</th>
+                  <th scope="col">PickXtimes</th>
+                  <th scope="col">SwingXtimes</th>
+                  <th scope="col">StopCube</th>
+                  <th scope="col" class="suite-start">VideoUnmask</th>
+                  <th scope="col">ButtonUnmask</th>
+                  <th scope="col">VideoUnmaskSwap</th>
+                  <th scope="col">ButtonUnmaskSwap</th>
+                  <th scope="col" class="suite-start">PickHighlight</th>
+                  <th scope="col">VideoRepick</th>
+                  <th scope="col">VideoPlaceButton</th>
+                  <th scope="col">VideoPlaceOrder</th>
+                  <th scope="col" class="suite-start">MoveCube</th>
+                  <th scope="col">InsertPeg</th>
+                  <th scope="col">PatternLock</th>
+                  <th scope="col">RouteStick</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>π<sub>0.5</sub></td>
+                  <td class="suite-start">30.00</td><td>42.89</td><td>35.56</td><td>6.67</td>
+                  <td class="suite-start">20.44</td><td>22.22</td><td>18.67</td><td>6.67</td>
+                  <td class="suite-start">11.33</td><td>0.44</td><td>31.11</td><td>25.78</td>
+                  <td class="suite-start">26.00</td><td>1.56</td><td>2.89</td><td>4.67</td>
                   <td>17.93</td>
                 </tr>
                 <tr>
+                  <td>π<sub>0.5</sub> w/ past actions</td>
+                  <td class="suite-start">26.67</td><td>58.33</td><td>26.67</td><td>4.67</td>
+                  <td class="suite-start">30.67</td><td>23.67</td><td>20.67</td><td>16.00</td>
+                  <td class="suite-start">12.33</td><td>8.67</td><td>24.00</td><td>18.67</td>
+                  <td class="suite-start">34.00</td><td>1.00</td><td>4.00</td><td>5.67</td>
+                  <td>19.73</td>
+                </tr>
+                <tr>
+                  <td>SAM2Act+</td>
+                  <td class="suite-start">40.00</td><td>76.00</td><td>25.33</td><td>0.00</td>
+                  <td class="suite-start">27.33</td><td>32.00</td><td>18.00</td><td><strong>26.67</strong></td>
+                  <td class="suite-start">17.33</td><td>5.33</td><td>24.67</td><td>20.00</td>
+                  <td class="suite-start">29.33</td><td>0.00</td><td>0.00</td><td>0.00</td>
+                  <td>21.37</td>
+                </tr>
+                <tr>
+                  <td>MemoryVLA</td>
+                  <td class="suite-start">10.00</td><td>17.00</td><td>1.00</td><td>0.00</td>
+                  <td class="suite-start">16.00</td><td>8.00</td><td>5.00</td><td>5.00</td>
+                  <td class="suite-start">7.00</td><td>0.00</td><td>13.00</td><td>4.00</td>
+                  <td class="suite-start">14.00</td><td>0.00</td><td>12.00</td><td>1.00</td>
+                  <td>7.13</td>
+                </tr>
+                <tr>
                   <td>MemER</td>
+                  <td class="suite-start"><strong>56.67</strong></td><td>79.33</td><td>59.33</td><td>0.00</td>
+                  <td class="suite-start"><strong>81.33</strong></td><td><strong>72.00</strong></td><td><strong>38.00</strong></td><td>21.33</td>
+                  <td class="suite-start"><strong>70.67</strong></td><td>25.33</td><td>30.00</td><td>26.00</td>
+                  <td class="suite-start"><strong>82.67</strong></td><td>6.67</td><td>16.67</td><td>12.00</td>
                   <td>42.38</td>
                 </tr>
                 <tr>
                   <td>FrameSamp</td>
+                  <td class="suite-start">39.56</td><td>87.33</td><td><strong>92.00</strong></td><td>42.00</td>
+                  <td class="suite-start">32.67</td><td>25.11</td><td>24.44</td><td>18.22</td>
+                  <td class="suite-start">22.89</td><td>30.44</td><td><strong>60.00</strong></td><td><strong>32.00</strong></td>
+                  <td class="suite-start">77.78</td><td>7.56</td><td>53.56</td><td>66.67</td>
                   <td>44.51</td>
                 </tr>
                 <tr class="ours">
                   <td>EveMem (Ours)</td>
+                  <td class="suite-start">51.33</td><td><strong>94.67</strong></td><td><strong>92.00</strong></td><td><strong>74.67</strong></td>
+                  <td class="suite-start">60.67</td><td>53.33</td><td>34.67</td><td><strong>26.67</strong></td>
+                  <td class="suite-start">44.00</td><td><strong>31.33</strong></td><td>44.67</td><td>26.67</td>
+                  <td class="suite-start">73.33</td><td><strong>12.67</strong></td><td><strong>58.67</strong></td><td><strong>83.33</strong></td>
                   <td><strong>53.92</strong></td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="metric-notes">
+            <p><strong>Success Rate (SR):</strong> percentage of evaluation rollouts that complete the full task. Results are averaged over three evaluation seeds.</p>
+            <p><strong>Suites:</strong> Counting tests event counts and sequence order; Permanence tracks hidden or moved objects; Reference recalls earlier visual cues; Imitation reproduces a demonstrated procedure.</p>
           </div>
 
           <h4 class="result-subheading qualitative-heading">Qualitative Results</h4>
@@ -153,43 +219,77 @@
 
           <h4 class="result-subheading">Quantitative Results</h4>
           <div class="results-table-wrap">
-            <table class="results-table">
-              <caption>Success rate across RMBench memory-complexity levels</caption>
+            <table class="results-table medium rmbench-results-table">
+              <caption>Task-level success rates on RMBench</caption>
               <thead>
                 <tr>
-                  <th scope="col">Method</th>
-                  <th scope="col">M(1) ↑</th>
-                  <th scope="col">M(n) ↑</th>
-                  <th scope="col">Average ↑</th>
+                  <th scope="col">Task</th>
+                  <th scope="col">DP</th>
+                  <th scope="col">ACT</th>
+                  <th scope="col">π<sub>0.5</sub></th>
+                  <th scope="col">X-VLA</th>
+                  <th scope="col">FrameSamp</th>
+                  <th scope="col">Mem-0</th>
+                  <th scope="col" class="ours-head">EveMem</th>
                 </tr>
               </thead>
               <tbody>
+                <tr class="group-row"><th scope="rowgroup" colspan="8">M(1): single key observation</th></tr>
                 <tr>
-                  <td>π<sub>0.5</sub></td>
-                  <td>14.4</td>
-                  <td>5.5</td>
-                  <td>10.4</td>
+                  <th scope="row">Observe and Pick Up</th>
+                  <td>1</td><td>1</td><td><strong>9</strong></td><td><strong>9</strong></td><td>3</td><td>4</td><td class="ours-cell">8</td>
                 </tr>
                 <tr>
-                  <td>FrameSamp</td>
-                  <td>61.0</td>
-                  <td>15.8</td>
-                  <td>40.9</td>
+                  <th scope="row">Rearrange Blocks</th>
+                  <td>0</td><td>29</td><td>13</td><td>13</td><td><strong>97</strong></td><td>89</td><td class="ours-cell"><strong>97</strong></td>
                 </tr>
                 <tr>
-                  <td>Mem-0</td>
-                  <td>52.8</td>
-                  <td>28.5</td>
-                  <td>42.0</td>
+                  <th scope="row">Put Back Block</th>
+                  <td>0</td><td>0</td><td>11</td><td>18</td><td><strong>100</strong></td><td>90</td><td class="ours-cell"><strong>100</strong></td>
                 </tr>
-                <tr class="ours">
-                  <td>EveMem (Ours)</td>
-                  <td><strong>67.4</strong></td>
-                  <td><strong>49.3</strong></td>
-                  <td><strong>59.3</strong></td>
+                <tr>
+                  <th scope="row">Swap Blocks</th>
+                  <td>11</td><td>2</td><td>24</td><td>16</td><td>79</td><td>67</td><td class="ours-cell"><strong>86</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Swap T</th>
+                  <td>20</td><td>2</td><td>15</td><td>3</td><td>26</td><td>14</td><td class="ours-cell"><strong>46</strong></td>
+                </tr>
+                <tr class="summary-row">
+                  <th scope="row">M(1) Average</th>
+                  <td>6.4</td><td>6.8</td><td>14.4</td><td>11.8</td><td>61.0</td><td>52.8</td><td class="ours-cell"><strong>67.4</strong></td>
+                </tr>
+                <tr class="group-row"><th scope="rowgroup" colspan="8">M(n): multiple non-local observations</th></tr>
+                <tr>
+                  <th scope="row">Battery Try</th>
+                  <td>10</td><td>19</td><td>16</td><td>26</td><td>16</td><td><strong>28</strong></td><td class="ours-cell">24</td>
+                </tr>
+                <tr>
+                  <th scope="row">Blocks Ranking Try</th>
+                  <td>10</td><td>0</td><td>6</td><td>1</td><td>8</td><td><strong>18</strong></td><td class="ours-cell">17</td>
+                </tr>
+                <tr>
+                  <th scope="row">Cover Blocks</th>
+                  <td>0</td><td>0</td><td>0</td><td>2</td><td>17</td><td>68</td><td class="ours-cell"><strong>86</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Press Button</th>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>22</td><td>0</td><td class="ours-cell"><strong>70</strong></td>
+                </tr>
+                <tr class="summary-row">
+                  <th scope="row">M(n) Average</th>
+                  <td>5.0</td><td>4.8</td><td>5.5</td><td>7.3</td><td>15.8</td><td>28.5</td><td class="ours-cell"><strong>49.3</strong></td>
+                </tr>
+                <tr class="summary-row total-row">
+                  <th scope="row">Total Average</th>
+                  <td>5.8</td><td>5.9</td><td>10.4</td><td>9.8</td><td>40.9</td><td>42.0</td><td class="ours-cell"><strong>59.3</strong></td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="metric-notes">
+            <p><strong>M(1):</strong> tasks requiring one key historical observation. <strong>M(n):</strong> tasks requiring evidence from multiple non-local observations or task stages.</p>
+            <p>All entries are task success rates (%); each EveMem policy is evaluated over 100 rollouts per task.</p>
           </div>
 
           <h4 class="result-subheading qualitative-heading">Qualitative Results</h4>
@@ -261,33 +361,48 @@
 
           <h4 class="result-subheading">Quantitative Results</h4>
           <div class="results-table-wrap">
-            <table class="results-table">
-              <caption>Average performance across four real-world tasks</caption>
+            <table class="results-table medium realworld-results-table">
+              <caption>Task-level real-world task success and phase completion rates</caption>
               <thead>
                 <tr>
-                  <th scope="col">Method</th>
-                  <th scope="col">TSR (%) ↑</th>
-                  <th scope="col">PCR (%) ↑</th>
+                  <th scope="col" rowspan="2">Task</th>
+                  <th scope="colgroup" colspan="2">π<sub>0.5</sub></th>
+                  <th scope="colgroup" colspan="2">FrameSamp</th>
+                  <th scope="colgroup" colspan="2" class="ours-head">EveMem</th>
+                </tr>
+                <tr>
+                  <th scope="col">TSR</th><th scope="col">PCR</th>
+                  <th scope="col">TSR</th><th scope="col">PCR</th>
+                  <th scope="col" class="ours-head">TSR</th><th scope="col" class="ours-head">PCR</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>π<sub>0.5</sub></td>
-                  <td>2.50</td>
-                  <td>31.25</td>
+                  <th scope="row">Clean Table <span class="phase-count">6 phases</span></th>
+                  <td>0.00</td><td>14.17</td><td>35.00</td><td>63.33</td><td class="ours-cell"><strong>80.00</strong></td><td class="ours-cell"><strong>81.67</strong></td>
                 </tr>
                 <tr>
-                  <td>FrameSamp</td>
-                  <td>30.00</td>
-                  <td>57.08</td>
+                  <th scope="row">Cover Block <span class="phase-count">3 phases</span></th>
+                  <td>10.00</td><td>26.67</td><td>15.00</td><td>43.33</td><td class="ours-cell"><strong>40.00</strong></td><td class="ours-cell"><strong>65.00</strong></td>
                 </tr>
-                <tr class="ours">
-                  <td>EveMem (Ours)</td>
-                  <td><strong>61.25</strong></td>
-                  <td><strong>73.96</strong></td>
+                <tr>
+                  <th scope="row">Pour Water <span class="phase-count">6 phases</span></th>
+                  <td>0.00</td><td>41.67</td><td>30.00</td><td>54.17</td><td class="ours-cell"><strong>60.00</strong></td><td class="ours-cell"><strong>66.67</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Swap Food <span class="phase-count">2 phases</span></th>
+                  <td>0.00</td><td>42.50</td><td>40.00</td><td>67.50</td><td class="ours-cell"><strong>65.00</strong></td><td class="ours-cell"><strong>82.50</strong></td>
+                </tr>
+                <tr class="summary-row total-row">
+                  <th scope="row">Average</th>
+                  <td>2.50</td><td>31.25</td><td>30.00</td><td>57.08</td><td class="ours-cell"><strong>61.25</strong></td><td class="ours-cell"><strong>73.96</strong></td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="metric-notes">
+            <p><strong>TSR — Task Success Rate:</strong> percentage of trials in which the entire task is completed.</p>
+            <p><strong>PCR — Phase Completion Rate:</strong> completed phases divided by all available phases. Because phases are sequential, only the consecutively completed prefix is counted. Each task is evaluated over 20 trials.</p>
           </div>
 
           <h4 class="result-subheading qualitative-heading">Qualitative Results</h4>

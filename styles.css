@@ -269,6 +269,14 @@ h1 {
   font-variant-numeric: tabular-nums;
 }
 
+.results-table.wide {
+  min-width: 1780px;
+}
+
+.results-table.medium {
+  min-width: 900px;
+}
+
 .results-table caption {
   position: absolute;
   width: 1px;
@@ -298,6 +306,7 @@ h1 {
   background: var(--dark);
   font-size: 0.82rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .results-table tbody tr:last-child td {
@@ -312,6 +321,90 @@ h1 {
   color: #1e3a8a;
   background: #eff6ff;
   font-weight: 600;
+}
+
+.results-table .ours-head {
+  background: #243d68;
+}
+
+.results-table .ours-cell {
+  color: #1e3a8a;
+  background: #eff6ff;
+}
+
+.results-table .suite-start {
+  border-left: 1px solid #cbd5e1;
+}
+
+.results-table .group-row th {
+  padding-block: 9px;
+  color: var(--ink);
+  background: #eef2f7;
+  text-align: left;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+}
+
+.results-table .summary-row th,
+.results-table .summary-row td {
+  font-weight: 600;
+}
+
+.results-table .total-row th,
+.results-table .total-row td {
+  border-top: 2px solid #94a3b8;
+}
+
+.results-table tbody th[scope="row"] {
+  color: var(--ink);
+  background: inherit;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.results-table thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+
+.results-table tbody tr:not(.group-row) > :first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #ffffff;
+}
+
+.results-table tbody tr:nth-child(even):not(.ours):not(.group-row) > :first-child {
+  background: #f8fafc;
+}
+
+.results-table tbody tr.ours > :first-child {
+  background: #eff6ff;
+}
+
+.phase-count {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+.metric-notes {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.metric-notes p {
+  margin-bottom: 4px;
+}
+
+.metric-notes p:last-child {
+  margin-bottom: 0;
 }
 
 .video-grid {
