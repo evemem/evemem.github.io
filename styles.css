@@ -408,6 +408,24 @@ h1 {
   margin-bottom: 0;
 }
 
+.result-figure {
+  margin: 0;
+}
+
+.result-figure img {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.result-figure figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
 .video-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
